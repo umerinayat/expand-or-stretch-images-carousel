@@ -1,0 +1,109 @@
+#expanded-carousel {
+  width: 100%;
+  height: 495px;
+  position: relative;
+}
+#expanded-carousel .carousel-body {
+  display: flex;
+  flex-direction: row;
+}
+#expanded-carousel .carousel-body .carousel-img {
+  position: relative;
+  display: flex;
+  transition: all 0.8s ease-in-out;
+}
+#expanded-carousel .carousel-body .carousel-img img {
+  height: 495px;
+  width: 100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.img-content {
+  width: 350px;
+  height: 180px;
+  border-radius: 8px;
+  position: absolute;
+  padding: 16px;
+  bottom: -40px;
+  opacity: 0.8;
+  background: radial-gradient(
+    84% 84% at 24.71% 8.4%,
+    rgb(68 66 66) 0%,
+    rgb(4 3 3) 100%
+  );
+  color: #fff;
+}
+
+.img-content h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+.carousel-img.active {
+  width: 100%;
+}
+
+.carousel-img.not-active {
+  width: 30%;
+}
+
+.layer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  #expanded-carousel {
+    width: 100%;
+    position: relative;
+    margin-bottom: 241px;
+  }
+  #expanded-carousel .carousel-body {
+    display: flex;
+    flex-direction: column;
+  }
+  #expanded-carousel .carousel-body .carousel-img {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #expanded-carousel .carousel-body .carousel-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .img-content {
+    width: 327px;
+    height: 130px;
+    z-index: 1000;
+    position: absolute;
+    padding: 16px;
+    bottom: 0;
+    color: #fff;
+  }
+  .img-content h2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  .carousel-img.active {
+    height: 350px !important;
+  }
+  .carousel-img.not-active {
+    height: 116px;
+  }
+}
